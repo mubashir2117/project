@@ -18,17 +18,23 @@ include "header.php";
     move_uploaded_file($tempPath, $myPath);
     
     
-    $img1 = $_FILES["song_file"];    
-$imgName1 = $img1['name'];
-$tempPath1 = $img1['tmp_name'];
-$myPath1 = "images/".$imgName1;
+    $audio = $_FILES["song_file"];
+    $audioName = $audio['name'];
+    $tempAudioPath = $audio['tmp_name'];
+    $audioPath = "audio/" .$audioName;
+$allowedAudioTypes = array("audio/mp3", "audio/wav");
+    if (in_array($_FILES["song_file"]["type"], $allowedAudioTypes)) {
+        move_uploaded_file($tempAudioPath, $audioPath);
 
-move_uploaded_file($tempPath1, $myPath1);
+
 
     $query9 = "INSERT INTO `song`(`song_name`,`song_image`,`song_file`,`genre_id`,`Artists_id`) VALUES
-     ('$song_name','$myPath','$myPath1','$genre_id','$Artists_id')";
+     ('$song_name','$myPath','$audioPath','$genre_id','$Artists_id')";
+$result9 = mysqli_query($conn, $query9);
 
-    $result9 = mysqli_query($conn, $query9);
+$qry11= "select * from song";
+$res11= mysqli_query($conn, $qry11);
+
 
     if($result9){
         echo "Record inserted";
@@ -39,6 +45,7 @@ move_uploaded_file($tempPath1, $myPath1);
         echo "Error";
     }
 }
+   }
 ?>
 
 <div class="content-body">
