@@ -5,12 +5,17 @@ include "header.php";
     include("config.php");
    if(isset($_POST['submit'])){   
     $video_name = $_POST["video_name"];
-    $video_file = $_FILES["video_file"];
     $genre_id = $_POST["genre"];
     $Artist_id = $_POST["artist"];
-
+    $video=$_FILES["video_file"];
+    $videoName= $video['name'];
+    $tempPath = $video['tmp_name'];
+    $myPath= "images/".$videoName;
+    
+    move_uploaded_file($tempPath, $myPath);
+    
     $query12 = "INSERT INTO `video`(`video_name`,`video_file`,`genre_id`,`Artists_id`) 
-    VALUES ('$video_name','$video_file','$genre_id','$Artist_id')";
+    VALUES ('$video_name','$myPath','$genre_id','$Artist_id')";
 
     $result12 = mysqli_query($conn, $query12);
     if ($result12) {
