@@ -5,11 +5,9 @@ include 'header.php';
 
 <?php
 include ("config.php");
-$query = "SELECT * FROM `video` inner join genre where genre.id = video.genre_id";
-$qry1 = "SELECT * FROM `video` inner join artist where artist.Artist_id = video.Artists_id";
+$query = "SELECT * FROM `video` join genre on genre.id = video.genre_id join artist on artist.Artist_id = video.Artists_id";
 
 $result = mysqli_query($conn,$query);
-$res1 = mysqli_query($conn,$qry1);
 
 ?>
 
@@ -29,7 +27,7 @@ $res1 = mysqli_query($conn,$qry1);
  <div class="content-body">
     <div class="container-fluid">
         <div class="row">
-            <a class="btn btn-primary f-s-12"  href="song.php">Add Video</a>
+            <a class="btn btn-primary f-s-12"  href="video.php">Add Video</a>
             <table class="table mt-4">
   <thead>
     <tr>
@@ -48,18 +46,16 @@ $res1 = mysqli_query($conn,$qry1);
    ?>
    <tr>       
        <td><?php echo $data["video_name"]; ?></td>
-       <td> <img src="<?php echo $data["video_file"]; ?>" alt="" width="100px" height="100px"></td>
+       <td><video width="200" height="150" controls>
+  <source src="<?php echo $data['video_file'] ?>" type="video/mp4">
+</video></td>
        <td><?php echo $data["genre_name"]; ?></td>
-       <?php
-    while($data1 = mysqli_fetch_assoc($res1)){
-   ?>
-       <td><?php echo $data1["artist_name"]; ?></td> 
+      
+       <td><?php echo $data["artist_name"]; ?></td> 
     <td><a class="btn btn-primary" href="editvideo.php?editvideoid=<?php echo $data['video_id']?>">Edit</a></td>
     <td><a class="btn btn-danger" href="deletevideo.php?delvideoid=<?php echo $data['video_id']?>">Delete</a></td>
    </tr>
-  <?php     
-}
-    ?>
+
 
 <?php     
 }

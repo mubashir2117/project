@@ -188,6 +188,7 @@
                             <li><a href="genre.php">Add Genre</a></li>
                            
                             <li><a href="genrelist.php">Genre List</a></li>
+
                         </ul>
                     </li>
                     <li class="nav-label text-white">Edit Artist</li>
@@ -196,6 +197,8 @@
                         <ul aria-expanded="false">
                             <li><a href="artist.php">Add Artist</a></li>                           
                             <li><a href="artistlist.php">Artist List</a></li>
+                            <li><a href="artist-cards.php">Artist card</a></li>
+
                         </ul>
                     </li>
                     <li class="nav-label text-white">Edit Song</li>
@@ -206,6 +209,8 @@
                             <li><a href="song.php">Add Song</a></li>
                            
                             <li><a href="songlist.php">Song List</a></li>
+                            <li><a href="song-cards.php">song card</a></li>
+
                         </ul>
                     </li>
                     
@@ -216,6 +221,8 @@
                             <li><a href="video.php">Add Video</a></li>
                            
                             <li><a href="videolist.php">Video List</a></li>
+                            <li><a href="video-cards.php">Video card</a></li>
+
                         </ul>
                     </li>
 

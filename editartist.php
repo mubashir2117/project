@@ -1,6 +1,7 @@
+
 <?php
-include "header.php";
-?>
+    include("header.php");?>
+
 <?php
     include("config.php");
     $id = $_GET['getid'];
@@ -8,12 +9,11 @@ include "header.php";
    if(isset($_POST['submit'])){
     // $id = $_POST["id"];
     $artist_name = $_POST["artist_name"];
-    $artist_image = $_POST["artist_image"];
     $genre_id = $_POST["genre_id"];
+    $artist_image=$_FILES["artist_image"];
 
-    
     $query4 = "UPDATE `artist` SET `artist_name`='$artist_name',
-    `artist_image`='$artist_image',`genre_id`='$genre_id' WHERE `Artist_id` = '$id'";
+    `artist_image`='$myPath2',`genre_id`='$genre_id' WHERE `Artist_id` = '$id'";
 
     $result4 = mysqli_query($conn, $query4);
 
@@ -24,16 +24,15 @@ include "header.php";
         echo "Error";
     }
 }
+
 ?>
-
-
 
 <div class="content-body">
     <div class="container-fluid">
 
         <div class="row">
             <div class="col-lg-12">
-                <form action="" method="Post">
+                <form action="" method="Post" enctype="multipart/form-data">
                     <h1>Edit Artist</h1>
                     <?php
                     $query = "SELECT * FROM `artist` WHERE Artist_id = $id";
@@ -64,9 +63,7 @@ include "header.php";
             <?php
                 }
             ?>
-        </select>
-                   
-
+        </select>                 
                     <button class="btn btn-outline-primary mt-3" name="submit">Edit</button>
                     <a class="btn btn-primary mt-3 mx-2" href="artistlist.php">Cancel</a>
                 </form>

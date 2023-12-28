@@ -9,6 +9,7 @@ include "header.php";
     $song_name = $_POST["song_name"];
     $genre_id = $_POST["genre"];
     $Artists_id = $_POST["artist"];
+
     
     $img=$_FILES["song_image"];
     $imgName= $img['name'];
@@ -22,8 +23,8 @@ include "header.php";
     $audioName = $audio['name'];
     $tempAudioPath = $audio['tmp_name'];
     $audioPath = "audio/" .$audioName;
-$allowedAudioTypes = array("audio/mp3", "audio/wav");
-    if (in_array($_FILES["song_file"]["type"], $allowedAudioTypes)) {
+// $allowedAudioTypes = array("audio/mp3", "audio/wav");
+    // if (in_array($_FILES["song_file"]["type"], $allowedAudioTypes)) {
         move_uploaded_file($tempAudioPath, $audioPath);
 
 
@@ -45,7 +46,7 @@ $res11= mysqli_query($conn, $qry11);
         echo "Error";
     }
 }
-   }
+
 ?>
 
 <div class="content-body">

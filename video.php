@@ -1,3 +1,4 @@
+
 <?php
 include "header.php";
 ?>
@@ -11,7 +12,7 @@ include "header.php";
     $videoName= $video['name'];
     $tempPath = $video['tmp_name'];
     $myPath= "images/".$videoName;
-    
+    print_r($_FILES["video_file"]);
     move_uploaded_file($tempPath, $myPath);
     
     $query12 = "INSERT INTO `video`(`video_name`,`video_file`,`genre_id`,`Artists_id`) 
