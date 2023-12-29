@@ -48,7 +48,7 @@ session_start();
                 <form action="" method="Post">
                     <h1>Login</h1>
                     <input type="text" class="p-1 border border-dark rounded" name="user_email" required><br><br>
-                    <input type="text" class="p-1 border border-dark rounded" name="user_password" required><br><br>
+                    <input type="password" class="p-1 border border-dark rounded" name="user_password" required><br><br>
 
                     <button class="btn btn-outline-primary btn-lg" name="submit">Login</button>
                 </form>
