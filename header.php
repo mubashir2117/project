@@ -43,7 +43,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="index.php" class="brand-logo">
                 <!-- <img class="logo-compact" src="./images/img.png" alt=""> -->
                 <!-- <img class="brand-title" src="./images/img-removebg-preview.png" alt=""> -->
                 <!-- <img class="logo-abbr" src="./images/adminimg-removebg-preview.png"  width="1260px" height="50px" alt=""> -->
@@ -146,11 +146,6 @@
                                     <i class="mdi mdi-account"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="./app-profile.html" class="dropdown-item">
-                                        <i class="icon-user"></i>
-                                        
-                                        <span class="ml-2">Profile </span>
-                                    </a>
                                     <a href="login.php" class="dropdown-item">
                                         <i class="icon-envelope-open"></i>
                                         <span class="ml-2">login </span>

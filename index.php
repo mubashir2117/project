@@ -6,7 +6,7 @@ if($_SESSION['user_id']){
     
 
     include("config.php");  
-    include "header.php";
+    include ("header.php");
 
 ?>
 

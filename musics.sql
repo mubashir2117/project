@@ -35,7 +35,7 @@ FOREIGN KEY (Artists_id) REFERENCES artist(Artist_id)
 create table video(
 video_id int primary key auto_increment,
 video_name varchar(100),
-video_file varchar(10005),
+video_file BLOB,
 genre_id int,
 Artists_id int,
 FOREIGN KEY (genre_id) REFERENCES genre(id),
@@ -52,7 +52,6 @@ create table users(
     user_name varchar(20),
     user_email varchar(200),
     user_password varchar(200),
-    user_address varchar(500),
     role_id int,
     foreign key (role_id) references roles(r_id)
 );

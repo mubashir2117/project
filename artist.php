@@ -14,7 +14,8 @@ $myPath= "images/".$imgName;
 
 move_uploaded_file($tempPath, $myPath);
  
-    $query = "INSERT INTO `artist`(`artist_name`, `artist_image`,`genre_id`) VALUES ('$artist_name','$myPath','$genre_id')";
+    $query = "INSERT INTO `artist`(`artist_name`, `artist_image`,`genre_id`) VALUES 
+    ('$artist_name','$myPath','$genre_id')";
 
     $result = mysqli_query($conn, $query);
 

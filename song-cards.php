@@ -29,8 +29,8 @@ $result = mysqli_query($conn,$query);
             <?php
             while ($data = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="col-lg-3 mt-3">
-                    <div class="card bg-dark text-white" style="width: 21rem; margin-top:80px; margin-left:250px">
+                <div class="col-lg-4 mt-3">
+                    <div class="card bg-dark text-white" style="width: 21rem; margin-top:80px; margin-left:200px">
                         <img src="<?php echo $data['song_image'] ?>" class="card-img-top"  width="20px" height="200px"alt="...">
                         <div class="card-body">
                             <h1 class="card-title"><?php echo $data['song_name'] ?></h1>

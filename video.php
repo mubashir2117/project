@@ -8,6 +8,7 @@ include "header.php";
     $video_name = $_POST["video_name"];
     $genre_id = $_POST["genre"];
     $Artist_id = $_POST["artist"];
+    
     $video=$_FILES["video_file"];
     $videoName= $video['name'];
     $tempPath = $video['tmp_name'];

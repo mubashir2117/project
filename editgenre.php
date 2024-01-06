@@ -1,7 +1,7 @@
-
 <?php
 include "header.php";
 ?>
+
 <?php
     include("config.php");
     $id = $_GET['id'];
@@ -38,7 +38,8 @@ include "header.php";
                     ?>
         <input value="<?php echo $rows["id"]?>" type="hidden" name="id">
 
-                    <input value="<?php echo $rows['genre_name']?>" type="text" class="p-1 border border-dark rounded name="genre_name"><br><br>
+                    <input value="<?php echo $rows['genre_name']?>" type="text"
+                     class="p-1 border border-dark rounded" name="genre_name"><br><br>
                     <button class="btn btn-outline-primary mt-2" name="submit">Edit</button>
                     <a class="btn btn-primary mt-2 mx-2" href="genrelist.php">Cancel</a>
                 </form>

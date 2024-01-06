@@ -22,7 +22,7 @@ include "header.php";
     $audio = $_FILES["song_file"];
     $audioName = $audio['name'];
     $tempAudioPath = $audio['tmp_name'];
-    $audioPath = "audio/" .$audioName;
+    $audioPath = "audio/".$audioName;
 // $allowedAudioTypes = array("audio/mp3", "audio/wav");
     // if (in_array($_FILES["song_file"]["type"], $allowedAudioTypes)) {
         move_uploaded_file($tempAudioPath, $audioPath);

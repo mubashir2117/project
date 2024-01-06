@@ -12,6 +12,13 @@
     $genre_id = $_POST["genre_id"];
     $artist_image=$_FILES["artist_image"];
 
+    $imgName = $artist_image['name'];
+    $tempPath = $artist_image['tmp_name'];
+    $myPath2= "images/".$imgName;
+    
+    move_uploaded_file($tempPath, $myPath2);
+
+
     $query4 = "UPDATE `artist` SET `artist_name`='$artist_name',
     `artist_image`='$myPath2',`genre_id`='$genre_id' WHERE `Artist_id` = '$id'";
 
