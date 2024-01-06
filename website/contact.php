@@ -8,10 +8,10 @@ include("config.php");
     $c_name = $_POST["c_name"];
     $c_email = $_POST["c_email"];
     $c_subject = $_POST["c_subject"];
-
+    $message = $_POST["message"];
     
-    $query = "INSERT INTO `contact`(`c_name`,`c_email`,`c_subject`) VALUES 
-    ('$c_name','$c_email','$c_subject')";
+    $query = "INSERT INTO `contact`(`c_name`,`c_email`,`c_subject`,`message`) VALUES 
+    ('$c_name','$c_email','$c_subject','$message')";
 
     $result = mysqli_query($conn, $query);
 
@@ -102,17 +102,16 @@ include("config.php");
 
     <div id="form" class="opacity-contact">
 
-            <form  id ="myForm" action="" method="POST">
+            <form action="" method="POST">
               <div class="input-line">
                 <input id="name" name="c_name" type="text" placeholder="NAME" class="input-same-line" required>
                 <input id="email" type="email" name="c_email" placeholder="EMAIL" class="input-same-line" required>
               </div>
               <div class="input-line-column">
                 <input id="subject" name="c_subject" type="text" placeholder="SUBJECT" required>
-                <textarea name="textarea" id="body" class="textarea" placeholder="MESSAGE" required></textarea>
+                <textarea name="textarea" id="body" name="message" class="textarea" placeholder="MESSAGE" required></textarea>
               </div>
              <button type="button" id="submit" name="submit" class="hover">Send</button>
-             <div id="message">INVALID EMAIL</div>
             </form>
           
     </div>
@@ -127,7 +126,12 @@ include("config.php");
 <div id="collaboration-mail" class="opacity-contact">
 
     <div class="circular-text">
-        <span id="rotated">  FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; </span>
+        <span id="rotated">  
+            FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; 
+            FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; 
+            FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp; 
+            FOR COLLABORATION * &nbsp;&nbsp;&nbsp;&nbsp;
+         </span>
     </div>
     <div class="mail">
         <a href="">Sound</a>
@@ -165,15 +169,15 @@ include("config.php");
 
         
     <!-- NAVIGATION CONTENT -->
-
-    <div class="navigation-content">
+   <div class="navigation-content">
         <div class="navigation-logo hover opacity">
             <a href="#" class="text">Sound</a>
          </div>
         <ul class="navigation-ul">
-            <li><a href="index.php" data-text="Home" data-img="images/bg-image-three.jpg">Home</a></li>
+            <li><a href="index.php" data-text="Home" data-img="images/album-thumbnail-five.jpg">Home</a></li>
             <li><a href="about.php"  data-text="About"  data-img="images/about-img.jpg">About</a></li>
             <li><a href="songsone.php" data-text="Songs"  data-img="images/album-thumbnail-nine.jpg">Songs</a></li>
+            <li><a href="videoone.php"  data-text="Video" data-img="images/img.jpg">Video</a></li>
             <li><a href="contact.php"  data-text="Contact" data-img="images/album-thumbnail-four.jpg">Contact</a></li>
         </ul>
         <div class="navigation-close hover about-close opacity">
@@ -182,8 +186,7 @@ include("config.php");
           </div>
     
             <div class="project-preview"></div>
-    
-    
+
             
      <!-- HEADPHONE IMG -->
      <div class="headphone-navigation opacity">

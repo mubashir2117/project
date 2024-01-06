@@ -124,15 +124,15 @@ include "config.php";
 
 
     <!-- NAVIGATION CONTENT -->
-
-    <div class="navigation-content">
+   <div class="navigation-content">
         <div class="navigation-logo hover opacity">
             <a href="#" class="text">Sound</a>
          </div>
         <ul class="navigation-ul">
-            <li><a href="index.php" data-text="Home" data-img="images/bg-image-three.jpg">Home</a></li>
+            <li><a href="index.php" data-text="Home" data-img="images/album-thumbnail-five.jpg">Home</a></li>
             <li><a href="about.php"  data-text="About"  data-img="images/about-img.jpg">About</a></li>
-            <li><a href="songone.php" data-text="Songs"  data-img="images/album-thumbnail-nine.jpg">Songs</a></li>
+            <li><a href="songsone.php" data-text="Songs"  data-img="images/album-thumbnail-nine.jpg">Songs</a></li>
+            <li><a href="videoone.php"  data-text="Video" data-img="images/img.jpg">Video</a></li>
             <li><a href="contact.php"  data-text="Contact" data-img="images/album-thumbnail-four.jpg">Contact</a></li>
         </ul>
         <div class="navigation-close hover about-close opacity">
@@ -141,7 +141,7 @@ include "config.php";
           </div>
     
             <div class="project-preview"></div>
-    
+
             
      <!-- HEADPHONE IMG -->
      <div class="headphone-navigation opacity">

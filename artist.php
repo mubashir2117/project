@@ -52,7 +52,7 @@ move_uploaded_file($tempPath, $myPath);
             ?>
         </select><br><br>
 
-                    <button class="btn btn-outline-primary btn-sm mt-2" name="submit">Add</button>
+                    <button class="btn btn-outline-primary btn-md" name="submit">Add Artist</button>
                 </form>
             </div>
         </div>

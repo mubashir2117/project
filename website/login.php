@@ -59,12 +59,13 @@ session_start();
     }
 
     .login-container {
-      background: #fff;
+      background: transparent;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
       width: 300px;
       text-align: center;
+      backdrop-filter:  blur(10px) !important;
     }
 
     .login-container h2 {
@@ -78,9 +79,10 @@ session_start();
     }
 
     .login-form label {
-      color: #2196F3;
+      color: #000;
       font-weight: bold;
       text-align: left;
+      
     }
 
     .login-form input {
@@ -97,18 +99,18 @@ session_start();
     }
 
     .login-form button {
-      background: #2196F3;
+      background: #1565C0;
       color: white;
       padding: 12px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 18px;
       transition: background 0.3s ease;
     }
 
     .login-form button:hover {
-      background: #1565C0;
+      background: transparent;
     }
 
     .login-form button:active {

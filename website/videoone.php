@@ -86,8 +86,6 @@ include "config.php";
 <div class="center container">
 <div id="songs-container" class="row">
 
-
-
     <!-- SONG -->
     <?php
                 $qry= "SELECT * FROM `video`  join genre on genre.id = video.genre_id join artist on artist.Artist_id = video.Artists_id";
@@ -95,9 +93,8 @@ include "config.php";
                 
                 while($data = mysqli_fetch_assoc($res)){
                     ?>
-                    <div class="song fade-up col-lg-4 col-md-6 col-sm-12">
-    
-             
+
+                    <div class="song fade-up col-lg-3 col-md-6 col-sm-12">  
     <div class="song-img">
     <video src="<?php echo $data['video_file'] ?>" width="250" height="200" type="video/mp4" controls>
 </video>
@@ -107,29 +104,26 @@ include "config.php";
         <div class="song-details-content">
         <div class="song-name">  <?php echo $data["video_name"];?>  </div>
         <div class="song-name"><?php echo $data["artist_name"];?></div>
-        <div class="artist-name"><?php echo $data["genre_name"];?> </div>
+        <div class="song-name"><?php echo $data["genre_name"];?> </div>
 
         </div>
         
         <div class="music-player">
          
-            <div class="play-song mouse">
-                <img src="images/play.png" alt="play" data-song="blindinglights">
-                <!--   DATA-SONG AND DATA-AUDIO VALUE SHOULD MATCH   -->
-              
-            </div>
             <div class="download-song mouse">
-                <a href="music/Kesariya.mp3"  download="Sound">
-                    <!-- <img src="images/download.png" alt="download"> -->
-                </a>
-            </div>
+    <a href="../<?php echo $data["video_file"]; ?>" download="<?php echo $data["video_name"]; ?>">
+        <img src="images/download.png" alt="download">
+    </a>
+</div>
+
         </div>
     </div>
-               
+                </div>
     <?php } ?>
 </div> 
 </div>
     <!-- SONG -->
+
 
 
 <!-- SONGS CONTAINER -->
@@ -162,25 +156,19 @@ include "config.php";
 </div>
 <!-- progress-bar -->
 
-
-
-
-
-
         </div>
 <!-- CONTENT -->
-
-
-      
+     
     <!-- NAVIGATION CONTENT -->
-    <div class="navigation-content">
+   <div class="navigation-content">
         <div class="navigation-logo hover opacity">
             <a href="#" class="text">Sound</a>
          </div>
         <ul class="navigation-ul">
-            <li><a href="index.php" data-text="Home" data-img="images/bg-image-three.jpg">Home</a></li>
+            <li><a href="index.php" data-text="Home" data-img="images/album-thumbnail-five.jpg">Home</a></li>
             <li><a href="about.php"  data-text="About"  data-img="images/about-img.jpg">About</a></li>
             <li><a href="songsone.php" data-text="Songs"  data-img="images/album-thumbnail-nine.jpg">Songs</a></li>
+            <li><a href="videoone.php"  data-text="Video" data-img="images/img.jpg">Video</a></li>
             <li><a href="contact.php"  data-text="Contact" data-img="images/album-thumbnail-four.jpg">Contact</a></li>
         </ul>
         <div class="navigation-close hover about-close opacity">
@@ -189,7 +177,7 @@ include "config.php";
           </div>
     
             <div class="project-preview"></div>
-    
+
     
             
      <!-- HEADPHONE IMG -->

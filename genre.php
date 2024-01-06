@@ -30,7 +30,7 @@ include "header.php";
                 <form action="" method="Post">
                     <h1>Add Genre</h1>
                     <input type="text" class="p-1 border border-dark rounded" name="genre_name" required><br><br>
-                    <button class="btn btn-outline-primary btn-sm" name="submit">Add</button>
+                    <button class="btn btn-outline-primary btn-sm" name="submit">Add Genre</button>
                 </form>
             </div>
         </div>

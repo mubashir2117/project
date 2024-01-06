@@ -29,9 +29,9 @@ $result = mysqli_query($conn,$query);
             <?php
             while ($data = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="col-lg-3 mt-3">
-                    <div class="card bg-dark text-white" style="width: 16rem; margin-top:80px; margin-left:250px">
-                        <video width="255" height="200" controls>
+                <div class="col-lg-5 mt-3">
+                    <div class="card bg-dark text-white" style="width: 19rem; margin-top:70px; margin-left:250px">
+                        <video width="303" height="210" controls>
   <source src="<?php echo $data['video_file'] ?>" type="video/mp4">
 </video>
                         <div class="card-body">
