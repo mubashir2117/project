@@ -34,6 +34,7 @@ $res1 = mysqli_query($conn,$qry1);
         <th scope="col">song_name</th>
         <th scope="col">song_image</th>
         <th scope="col">song_file</th>
+        <th scope="col">Year</th>
         <th scope="col">Genreid</th>
         <th scope="col">Artists_id</th> 
         <th scope="col">Edit</th>
@@ -52,6 +53,7 @@ $res1 = mysqli_query($conn,$qry1);
   <source src="<?php echo $data1["song_file"]; ?>" width="100px" height="100px" type="audio/ogg">
 </audio>
 </td>
+       <td><?php echo $data1["years"]; ?></td>
        <td><?php echo $data1["genre_name"]; ?></td>
        <td><?php echo $data1["artist_name"]; ?></td> 
     <td><a class="btn btn-primary" href="editsong.php?editsid=<?php echo $data1['song_id']?>">Edit</a></td>

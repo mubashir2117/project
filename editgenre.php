@@ -36,7 +36,7 @@ include "header.php";
                     $result1 = mysqli_query($conn, $qry);
                     $rows = mysqli_fetch_assoc($result1);
                     ?>
-        <input value="<?php echo $rows["id"]?>" type="hidden" name="id">
+        <input class="p-1 border border-dark rounded" value="<?php echo $rows["id"]?>" type="hidden" name="id">
 
                     <input value="<?php echo $rows['genre_name']?>" type="text"
                      class="p-1 border border-dark rounded" name="genre_name"><br><br>

@@ -40,8 +40,10 @@
             <!-- NAVIGATION -->
             <div class="navigation">
                 <div class="logo hover ">
-                   <a href="index-two.html" class="text">Sound</a>
-                </div>
+                <img src="images/logo.png" style=" background-color: rgba(145, 140, 140, 0.822);  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+         backdrop-filter:  blur(10px);  border-radius: 10px;"  width="200" height="140" title="headphone zone" class="texts" alt="headphone">
+      
+          </div>
                 <div class="menu-bar hover ">
                     <div class="menu-bar-name text">
                         Menu
@@ -119,10 +121,8 @@
 
 
      <!-- NAVIGATION CONTENT -->
-   <div class="navigation-content">
-        <div class="navigation-logo hover opacity">
-            <a href="#" class="text">Sound</a>
-         </div>
+     <div class="navigation-content">
+        
         <ul class="navigation-ul">
             <li><a href="index.php" data-text="Home" data-img="images/album-thumbnail-five.jpg">Home</a></li>
             <li><a href="about.php"  data-text="About"  data-img="images/about-img.jpg">About</a></li>
@@ -143,18 +143,7 @@
       <img src="images/headphone.png" title="headphone zone" class="text" alt="headphone">
     </div>
      <!-- HEADPHONE IMG -->
-  
-  
-      <!-- SOCIAL MEDIA LINKS -->
-      <div class="social-media-links-navigation">
-          <ul>
-              <li ><a href="#"  class="text hover opacity">YT</a></li>
-              <li ><a href="#"  class="text hover opacity">FB</a></li>
-              <li ><a href="#"  class="text hover opacity">IG</a></li>
-          </ul>
-      </div>
-        <!-- SOCIAL MEDIA LINKS -->
-  
+      
   </div>
   
   <!-- NAVIGATION CONTENT -->

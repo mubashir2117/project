@@ -9,7 +9,7 @@ include "header.php";
     $song_name = $_POST["song_name"];
     $genre_id = $_POST["genre"];
     $Artists_id = $_POST["artist"];
-
+    $year = $_POST["years"];
     
     $img=$_FILES["song_image"];
     $imgName= $img['name'];
@@ -23,14 +23,12 @@ include "header.php";
     $audioName = $audio['name'];
     $tempAudioPath = $audio['tmp_name'];
     $audioPath = "audio/".$audioName;
-// $allowedAudioTypes = array("audio/mp3", "audio/wav");
-    // if (in_array($_FILES["song_file"]["type"], $allowedAudioTypes)) {
-        move_uploaded_file($tempAudioPath, $audioPath);
+    move_uploaded_file($tempAudioPath, $audioPath);
 
 
 
-    $query9 = "INSERT INTO `song`(`song_name`,`song_image`,`song_file`,`genre_id`,`Artists_id`) VALUES
-     ('$song_name','$myPath','$audioPath','$genre_id','$Artists_id')";
+    $query9 = "INSERT INTO `song`(`song_name`,`song_image`,`song_file`,`years`,`genre_id`,`Artists_id`) VALUES
+     ('$song_name','$myPath','$audioPath','$year','$genre_id','$Artists_id')";
 $result9 = mysqli_query($conn, $query9);
 
 $qry11= "select * from song";
@@ -60,6 +58,8 @@ $res11= mysqli_query($conn, $qry11);
                     <input type="text" class="p-1 border border-dark rounded" name="song_name" required><br><br>
                     <input type="file" class="p-1 border border-dark rounded" name="song_image" required><br><br>
                     <input type="file" class="p-1 border border-dark rounded" name="song_file" required><br><br>
+                    <input type="text" class="p-1 border border-dark rounded" name="years" required><br><br>
+
                     
                     <select name="genre" id="" class="form-control mt-2">
             <?php

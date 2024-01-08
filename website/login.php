@@ -1,6 +1,5 @@
 <?php
 session_start();
-// include("header.php");
 ?>
 <?php
 
@@ -41,7 +40,11 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Document</title>
+   <!--favicon-img--> 
+   <link rel="icon" type="image/png" href="images/favicon.jpg">
+      
 </head>
 <style>
     body {
@@ -59,12 +62,12 @@ session_start();
     }
 
     .login-container {
-      background: transparent;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
       width: 300px;
       text-align: center;
+      background: rgba(77, 57, 57, 0.295);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
       backdrop-filter:  blur(10px) !important;
     }
 
@@ -127,14 +130,18 @@ session_start();
         <div class="row">
 <div class="login-container">
                 <form action="" class="login-form" id="loginForm"  method="Post">
-                    <h1>Login</h1>
+                    <h1>Login!</h1>
                     <label for="username">Username:</label>
                     <input type="text" class="p-1 border border-dark rounded" id="username" name="user_email" autocomplete="off" required><br><br>
                     <label for="password">Password:</label>
                     <input type="password" class="p-1 border border-dark rounded" id="password" name="user_password" autocomplete="off" required><br><br>
 
                     <button class="btn btn-outline-primary btn-lg" name="submit">Login</button>
+                    <p class="mt-5 text-center text-white" style="color:white; text-decoration:none;">You have not an account? 
+                    <a href="signup.php" class="text-primary" style="color:yellow; font-size:18px; text-decoration:none;">Signup</a></p>
+            
                 </form>
+
             </div>
         </div>
     </div>
@@ -143,8 +150,3 @@ session_start();
 </body>
 </html>
 
-<?php
-    
-    // include("footer.php");
-
-?>

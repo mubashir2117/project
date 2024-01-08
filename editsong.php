@@ -11,7 +11,8 @@ include "header.php";
     
     $genre_id = $_POST["genre_id"];
     $Artist_id = $_POST["Artists_id"];
-    
+    $years = $_POST["years"];
+
     $img=$_FILES["song_image"];
     $imgName = $img['name'];
     $tempPath = $img['tmp_name'];
@@ -26,7 +27,7 @@ include "header.php";
     
     move_uploaded_file($tempPath, $myPath4);
 
-    $query1 = "UPDATE `song` SET `song_name`='$song_name',`song_image`='$myPath3',`song_file`='$myPath4',
+    $query1 = "UPDATE `song` SET `song_name`='$song_name',`song_image`='$myPath3',`song_file`='$myPath4',`years`='$years',
     `genre_id`='$genre_id',`Artists_id`='$Artist_id' WHERE `song_id` = '$id'";
 
     $result1 = mysqli_query($conn, $query1);
@@ -56,9 +57,10 @@ include "header.php";
                     ?>
         <input value="<?php echo $rows["song_id"]?>" type="hidden" name="id">
 
-                    <input value="<?php echo $rows['song_name']?>" type="text" name="song_name"><br><br>
-                    <input value="<?php echo $rows['song_image']?>" type="file" name="song_image"><br><br>
-                    <input value="<?php echo $rows['song_file']?>" type="file" name="song_file"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['song_name']?>" type="text" name="song_name"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['song_image']?>" type="file" name="song_image"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['song_file']?>" type="file" name="song_file"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['years']?>" type="number"  name="years" required><br><br>
 
                     <select name="genre_id" id="" class="form-control mt-2">
             <?php

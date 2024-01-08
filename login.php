@@ -135,7 +135,7 @@ session_start();
         <div class="row">
 <div class="login-container">
                 <form action="" class="login-form" id="loginForm"  method="Post">
-                    <h1>Login</h1>
+                    <h1>Login!</h1>
                     <label for="username">Username:</label>
                     <input type="text" class="p-1 border border-dark rounded" id="username" name="user_email" autocomplete="off" required><br><br>
                     <label for="password">Password:</label>

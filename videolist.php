@@ -33,6 +33,7 @@ $result = mysqli_query($conn,$query);
     <tr>
         <th scope="col">video_name</th>
         <th scope="col">video_file</th>
+        <th scope="col">Years</th>
         <th scope="col">Genreid</th>
         <th scope="col">Artists_id</th> 
         <th scope="col">Edit</th>
@@ -49,6 +50,7 @@ $result = mysqli_query($conn,$query);
        <td><video width="200" height="150" controls>
   <source src="<?php echo $data['video_file'] ?>" type="video/mp4">
 </video></td>
+<td><?php echo $data["years"]; ?></td>
        <td><?php echo $data["genre_name"]; ?></td>
       
        <td><?php echo $data["artist_name"]; ?></td> 

@@ -11,6 +11,7 @@
     $video_name = $_POST["video_name"];
     $genre_id = $_POST["genre_id"];
     $Artist_id = $_POST["Artists_id"];
+    $years = $_POST["years"];
 
     $video=$_FILES["video_file"];
     $videoName = $video['name'];
@@ -20,7 +21,7 @@
     move_uploaded_file($tempPath, $videoName);
 
     
-    $query1 = "UPDATE `video` SET `video_name`='$video_name',`video_file`='$myPath5',
+    $query1 = "UPDATE `video` SET `video_name`='$video_name',`video_file`='$myPath5',`years`='$years',
     `genre_id`='$genre_id',`Artists_id`='$Artist_id' WHERE `video_id` = '$id'";
 
     $result1 = mysqli_query($conn, $query1);
@@ -48,8 +49,9 @@
                     ?>
         <input value="<?php echo $rows["video_id"]?>" type="hidden" name="id">
 
-                    <input value="<?php echo $rows['video_name']?>" type="text" name="video_name"><br><br>
-                    <input value="<?php echo $rows['video_file']?>" type="file" name="video_file"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['video_name']?>" type="text" name="video_name"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['video_file']?>" type="file" name="video_file"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $rows['video_file']?>" type="number" name="years"><br><br>
 
                     <select name="genre_id" id="" class="form-control mt-2">
             <?php

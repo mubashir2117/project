@@ -8,6 +8,8 @@ include "header.php";
     $video_name = $_POST["video_name"];
     $genre_id = $_POST["genre"];
     $Artist_id = $_POST["artist"];
+    $years = $_POST["years"];
+
     
     $video=$_FILES["video_file"];
     $videoName= $video['name'];
@@ -16,8 +18,8 @@ include "header.php";
     print_r($_FILES["video_file"]);
     move_uploaded_file($tempPath, $myPath);
     
-    $query12 = "INSERT INTO `video`(`video_name`,`video_file`,`genre_id`,`Artists_id`) 
-    VALUES ('$video_name','$myPath','$genre_id','$Artist_id')";
+    $query12 = "INSERT INTO `video`(`video_name`,`video_file`,`years`,`genre_id`,`Artists_id`) 
+    VALUES ('$video_name','$myPath','$years','$genre_id','$Artist_id')";
 
     $result12 = mysqli_query($conn, $query12);
     if ($result12) {
@@ -38,6 +40,8 @@ include "header.php";
                     <h1>Add Video</h1>
                     <input type="text" class="p-1 border border-dark rounded" name="video_name" required><br><br>         
                     <input type="file" class="p-1 border border-dark rounded" name="video_file" required><br><br>
+                    <input type="number" class="p-1 border border-dark rounded" name="years" required><br><br>
+
                     
                     <select name="genre" id="" class="form-control mt-2">
             <?php
@@ -50,7 +54,7 @@ include "header.php";
             <?php
                 }
             ?>
-        </select><br><br>
+        </select><br>
 
         <select name="artist" id="" class="form-control mt-2">
             <?php
@@ -63,7 +67,7 @@ include "header.php";
             <?php
                 }
             ?>
-        </select><br><br>
+        </select><br>
 
 
                     <button class="btn btn-outline-primary btn-sm mt-2" name="submit">Add Video</button>

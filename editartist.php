@@ -48,8 +48,8 @@
                     ?>
         <input value="<?php echo $data["Artist_id"]?>" type="hidden" name="id">
 
-                    <input value="<?php echo $data['artist_name']?>" type="text" name="artist_name"><br><br>
-                    <input value="<?php echo $data['artist_image']?>" type="file" name="artist_image"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $data['artist_name']?>" type="text" name="artist_name"><br><br>
+                    <input class="p-1 border border-dark rounded" value="<?php echo $data['artist_image']?>" type="file" name="artist_image"><br><br>
 
                     
                     <select name="genre_id" id="" class="form-control mt-2">

@@ -887,7 +887,7 @@ SONGS ONE
   width: 275px;
   position: relative;
   margin: 40px auto;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 12px;
   margin-right: 12px;
   margin-bottom: 40px;
@@ -925,7 +925,7 @@ SONGS ONE
     text-align: center;
     font-family: poppins;
     padding: 20px;
-    padding-top: 5px;
+    padding-top: 10px;
   }
   #songs-one #songs-container .song .song-details .artist-name , #songs-one #songs-container .song .song-details .song-name{
       padding-top: 5px;
@@ -967,7 +967,7 @@ SONGS ONE
 
 }
 #songs-one #songs-container .song .download-song a{
-    width: 80px;
+    width: 60px;
     cursor: pointer;
 }
 
