@@ -12,10 +12,57 @@
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
     <link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
-
-
-
 </head>
+<style>
+    /* Basic styling for the dropdown */
+    .dropdown {
+      width: 200px;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      
+      border-radius: 4px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    /* Style for dropdown options */
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Highlight the selected option */
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Show the dropdown content when the dropdown button is hovered */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+
 
 <body>
 
@@ -47,7 +94,7 @@
                 <!-- <img class="logo-compact" src="./images/img.png" alt=""> -->
                 <!-- <img class="brand-title" src="./images/img-removebg-preview.png" alt=""> -->
                 <!-- <img class="logo-abbr" src="./images/adminimg-removebg-preview.png"  width="1260px" height="50px" alt=""> -->
-                <h3 class="text-white text-content mt-3 mx-5 ">ADMIN</h3>
+                <h5 class="text-white text-content mt-3 mx-5 ">ADMIN</h5>
             </a>
 
             <div class="nav-control"> 
@@ -81,83 +128,15 @@
                         </div>
 
                         <ul class="navbar-nav header-right">
-                            <li class="nav-item dropdown notification_dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                    <i class="mdi mdi-bell"></i>
-                                    <div class="pulse-css"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <ul class="list-unstyled">
-                                        <li class="media dropdown-item">
-                                            <span class="success"><i class="ti-user"></i></span>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    <p><strong>Martin</strong> has added a <strong>customer</strong> Successfully
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <span class="notify-time">3:20 am</span>
-                                        </li>
-                                        <li class="media dropdown-item">
-                                            <span class="primary"><i class="ti-shopping-cart"></i></span>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    <p><strong>Jennifer</strong> purchased Light Dashboard 2.0.</p>
-                                                </a>
-                                            </div>
-                                            <span class="notify-time">3:20 am</span>
-                                        </li>
-                                        <li class="media dropdown-item">
-                                            <span class="danger"><i class="ti-bookmark"></i></span>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    <p><strong>Robin</strong> marked a <strong>ticket</strong> as unsolved.
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <span class="notify-time">3:20 am</span>
-                                        </li>
-                                        <li class="media dropdown-item">
-                                            <span class="primary"><i class="ti-heart"></i></span>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    <p><strong>David</strong> purchased Light Dashboard 1.0.</p>
-                                                </a>
-                                            </div>
-                                            <span class="notify-time">3:20 am</span>
-                                        </li>
-                                        <li class="media dropdown-item">
-                                            <span class="success"><i class="ti-image"></i></span>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    <p><strong> James.</strong> has added a<strong>customer</strong> Successfully
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <span class="notify-time">3:20 am</span>
-                                        </li>
-                                    </ul>
-                                    <a class="all-notification" href="#">See all notifications <i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown header-profile">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                    <i class="mdi mdi-account"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="login.php" class="dropdown-item">
-                                        <i class="icon-envelope-open"></i>
-                                        <span class="ml-2">login </span>
-                                    </a>
-                                    <a href="logout.php" class="dropdown-item">
-                                        <i class="icon-key"></i>
-                                        <span class="ml-2">Logout </span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+
+                        <div class="dropdown mt-4">
+  <div class="dropdown-btn mx-5"> <i class="mdi mdi-account"></i></div>
+  <div class="dropdown-content">
+    <a href="login.php">Login</a>
+    <a href="logout.php">Logout</a>
+   </div>
+</div>
+
                 </nav>
             </div>
         </div>
@@ -177,7 +156,7 @@
                             </a>
 </li> -->
                     
-                    <li class="nav-label text-white">Edits</li>
+                    <li class="nav-label text-white">Genre</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">Genre</span></a>
                         <ul aria-expanded="false">
@@ -187,52 +166,47 @@
 
                         </ul>
                     </li>
-                    <li class="nav-label text-white">Edit Artist</li>
+                    <li class="nav-label text-white">Artist</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text text-white">Artist</span></a>
                         <ul aria-expanded="false">
                             <li><a href="artist.php">Add Artist</a></li>                           
                             <li><a href="artistlist.php">Artist List</a></li>
-                            <li><a href="artist-cards.php">Artist card</a></li>
-
-                        </ul>
+                           </ul>
                     </li>
-                    <li class="nav-label text-white">Edit Song</li>
+                    <li class="nav-label text-white"> Song</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text text-white">Song</span></a>
 
                         <ul aria-expanded="false">
-                            <li><a href="song.php">Add Song</a></li>
-                           
+                            <li><a href="song.php">Add Song</a></li>                           
                             <li><a href="songlist.php">Song List</a></li>
-                            <li><a href="song-cards.php">song card</a></li>
-
+                            
                         </ul>
                     </li>
                     
-                    <li class="nav-label text-white">Edits Video</li>
+                    <li class="nav-label text-white"> Video</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">Video</span></a>
                         <ul aria-expanded="false">
                             <li><a href="video.php">Add Video</a></li>
                            
                             <li><a href="videolist.php">Video List</a></li>
-                            <li><a href="video-cards.php">Video card</a></li>
+                          
+                        </ul>
+                    </li>  
 
+                   
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-app-store"></i><span class="nav-text text-white">Reviews</span></a>
+
+                        <ul aria-expanded="false">
+                            <li><a href="index.php">Reviews</a></li>
+                        
                         </ul>
                     </li>
-
-                     <!-- <li class="nav-label">Table</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="table-datatable-basic.html">Datatable</a></li>
-                        </ul>
-                    </li> -->
-
-                  
                 </ul>
+                
             </div>
 
 

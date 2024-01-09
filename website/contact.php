@@ -2,28 +2,6 @@
 include("config.php");
 ?>
 
-<?php
-   if(isset($_POST['submit'])){
-   
-    $c_name = $_POST["c_name"];
-    $c_email = $_POST["c_email"];
-    $c_subject = $_POST["c_subject"];
-    $message = $_POST["message"];
-    
-    $query = "INSERT INTO `contact`(`c_name`,`c_email`,`c_subject`,`message`) VALUES 
-    ('$c_name','$c_email','$c_subject','$message')";
-
-    $result = mysqli_query($conn, $query);
-
-    if($result){
-        echo "Record inserted";
-    }
-    else{
-        echo "Error";
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,17 +23,12 @@ include("config.php");
 <body>
     <main id="contact-one">
 
-         <!-- CUSTOM CURSOR -->
-         <!-- <div class="cursor scale"></div>
-         <div class="cursor-two scale"></div> -->
-         <!-- CUSTOM CURSOR -->
-
-        <!-- PRELOADER -->
+            <!-- PRELOADER -->
         <div id="preloader">
             <div class="p">
                 <img src="images/headphone.png" alt="headphone">
             </div>
-            <div class="p">Use Headphone For Better Experience.</div>
+            <div class="p">Use Headphone For Better Music Experience.</div>
         </div>
         <!-- PRELOADER -->
 
@@ -109,10 +82,10 @@ include("config.php");
                 <input id="email" type="email" name="c_email" placeholder="EMAIL" class="input-same-line" required>
               </div>
               <div class="input-line-column">
-                <input id="subject" name="c_subject" type="text" placeholder="SUBJECT" required>
-                <textarea name="textarea" id="body" name="message" class="textarea" placeholder="MESSAGE" required></textarea>
+                <input id="subject" name="reviews" type="text" placeholder="REVIEWS" required>
+                <input id="subject" name="message" type="text" placeholder="MESSAGE" required>
               </div>
-             <button type="button" id="submit" name="submit" class="hover">Send</button>
+             <button type="submit" id="submit" name="submit" class="hover">Send</button>
             </form>
           
     </div>
@@ -212,3 +185,25 @@ include("config.php");
 
 </body>
 </html>
+<?php
+   if(isset($_POST['submit'])){
+   
+    $c_name = $_POST["c_name"];
+    $c_email = $_POST["c_email"];
+    $reviews = $_POST["reviews"];
+    $message = $_POST["message"];
+    
+    $query = "INSERT INTO `contact`(`c_name`,`c_email`,`reviews`,`message`) VALUES 
+    ('$c_name','$c_email','$reviews','$message')";
+
+    $result = mysqli_query($conn, $query);
+
+    if($result){
+        echo "Record inserted";
+    }
+    else{
+        echo "Error";
+    }
+}
+
+?>

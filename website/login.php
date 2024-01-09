@@ -1,39 +1,7 @@
 <?php
 session_start();
 ?>
-<?php
 
-    include('config.php');
-
-    if(isset($_POST['submit'])){
-
-    
-      $user_email = $_POST['user_email'];
-      $user_password = $_POST['user_password'];
-
-      $query = "SELECT * from users where user_email = '$user_email' AND user_password = '$user_password'";
-
-      $result = mysqli_query($conn, $query);
-      $data = mysqli_fetch_array($result);
-      if(mysqli_num_rows($result) > 0){
-        $_SESSION['user_id'] = $data['user_id'];
-        $_SESSION['user_name'] = $data['user_name'];
-        $_SESSION['role'] = $data['role_id'];
-
-        if($_SESSION['role'] == 2){
-
-          echo "<script>location.href = 'index.php';</script>";
-        }
-      }
-      else{
-          echo "<div class='alert alert-danger w-75 mt-5 mx-auto' role='alert'>
-          Username or password is incorrect
-        </div>";
-      }
-    }
-    
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -119,6 +87,10 @@ session_start();
     .login-form button:active {
       background: #0D47A1;
     }
+    #err{
+      text-align: center;
+      font-weight: bold;
+    }
 
     
   </style>
@@ -128,8 +100,9 @@ session_start();
     <div class="container-fluid">
 
         <div class="row">
+          <div id="err" style="color:red"></div>
 <div class="login-container">
-                <form action="" class="login-form" id="loginForm"  method="Post">
+                <form action="" class="login-form" id="loginForm"  method="POST">
                     <h1>Login!</h1>
                     <label for="username">Username:</label>
                     <input type="text" class="p-1 border border-dark rounded" id="username" name="user_email" autocomplete="off" required><br><br>
@@ -150,3 +123,39 @@ session_start();
 </body>
 </html>
 
+<?php
+
+    include('config.php');
+
+    if(isset($_POST['submit'])){
+
+    
+      $user_email = $_POST['user_email'];
+      $user_password = $_POST['user_password'];
+
+      $query = "SELECT * from users where user_email = '$user_email' AND user_password = '$user_password'";
+
+      $result = mysqli_query($conn, $query);
+      $data = mysqli_fetch_array($result);
+      if(mysqli_num_rows($result) > 0){
+        $_SESSION['user_id'] = $data['user_id'];
+        $_SESSION['user_name'] = $data['user_name'];
+        $_SESSION['role'] = $data['role_id'];
+
+        if($_SESSION['role'] == 2){
+
+          echo "<script>location.href = 'index.php';</script>";
+        }
+      }
+      else{
+          echo "
+          <script>
+          document.getElementById('err').innerHTML='Username Or Password is Incorrect';
+          </script>
+      
+          ";
+      }
+    }
+    
+
+?>

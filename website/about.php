@@ -32,7 +32,7 @@
             <div class="p">
                 <img src="images/headphone.png" alt="headphone">
             </div>
-            <div class="p">Use Headphone For Better Experience.</div>
+            <div class="p">Use Headphone For Better Music Experience.</div>
         </div>
 
         <div id="about-one-content">
@@ -93,8 +93,7 @@
       On this page you can find out what I have been up to lately and maybe even a little bit about where 
       I will go in the future. For me, the greatest thing about being a musician is being in the position 
       to inspire other people. I take such pleasure in hearing that people have been motivated to create 
-      after hearing my music, whether it be a painting, a poem, their own music or something completely different.
-       Music is not a one way street, it is a conversation where the listener's role is as important as the 
+      after hearing my music. Music is not a one way street, it is a conversation where the listener's role is as important as the 
        artist's. Well, here you can find my side of it all.
     </div>
     
